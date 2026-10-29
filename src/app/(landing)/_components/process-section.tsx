@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 const VELOCITY_BENCHMARKS = [
   {
     label: "Orbinora Dedicated Squad",
-    sublabel: "2-wk prototype + 6–8 wk production build",
+    sublabel: "2-wk prototype + 6–8 wk product build",
     weeks: 8,
     maxWeeks: 30,
     highlight: true,
@@ -146,7 +146,7 @@ export function ProcessSection() {
                   <div className="space-y-2.5 text-xs">
                     {[
                       "Interactive Figma user flows & component library",
-                      "PostgreSQL multi-tenant schema & API contracts",
+                      "Clear product flows and handoff notes",
                       "Milestone-by-milestone delivery schedule",
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-2.5 rounded-lg bg-neutral-50 px-3 py-2.5 text-foreground">
@@ -168,7 +168,7 @@ export function ProcessSection() {
                     <div className="flex items-center justify-between rounded-lg bg-neutral-50 px-3 py-2.5">
                       <span className="flex items-center gap-2 font-medium text-foreground">
                         <RiGitPullRequestLine className="size-4 text-primary" />
-                        14 PRs merged to your GitHub
+                        A working product to review
                       </span>
                       <span className="text-muted-foreground tabular-nums">100% CI green</span>
                     </div>
@@ -186,17 +186,17 @@ export function ProcessSection() {
               {activeIdx === 3 && (
                 <div className="space-y-4">
                   <div className="flex items-center justify-between border-b border-black/6 pb-3 text-xs">
-                    <span className="font-medium text-foreground">Production Handover & Warranty</span>
+                    <span className="font-medium text-foreground">Launch & Ongoing Support</span>
                     <span className="text-emerald-600 font-medium">30-Day Coverage</span>
                   </div>
                   <div className="space-y-2.5 text-xs">
                     <div className="flex items-center gap-2.5 rounded-lg bg-neutral-50 px-3 py-2.5 text-foreground">
                       <RiShieldCheckLine className="size-4 shrink-0 text-primary" />
-                      <span>Zero-downtime cutover on your AWS / Vercel account</span>
+                      <span>A smooth launch in your own accounts</span>
                     </div>
                     <div className="flex items-center gap-2.5 rounded-lg bg-neutral-50 px-3 py-2.5 text-foreground">
                       <RiCheckboxCircleFill className="size-4 shrink-0 text-emerald-500" />
-                      <span>Runbooks, architecture docs & team training included</span>
+                      <span>Everything your team needs to take it forward</span>
                     </div>
                   </div>
                 </div>

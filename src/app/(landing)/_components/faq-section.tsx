@@ -19,7 +19,7 @@ export function FaqSection() {
 
           <Reveal className="mt-8">
             <p className="text-muted-foreground text-sm">
-              Have a specific technical question?{" "}
+              Have a specific question?{" "}
               <a
                 href={`mailto:${company.email}`}
                 className="text-foreground decoration-foreground/40 inline-flex items-center gap-0.5 font-medium decoration-dotted underline-offset-4 hover:underline"

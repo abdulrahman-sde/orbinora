@@ -13,8 +13,8 @@ export function WorkSection() {
       <SectionHeading
         align="split"
         label="Selected work"
-        title="Products we have taken from brief to production."
-        description="Representative engagements across fintech, healthcare operations, and applied legal AI—shipped on fixed-scope milestones."
+        title="Products we have brought from idea to launch."
+        description="A selection of products we have shaped, designed, and launched with teams across finance, healthcare, and professional services."
       />
 
       <div className="mt-16 divide-y divide-black/6">
@@ -63,8 +63,8 @@ export function WorkSection() {
 
       <Reveal className="mt-16 flex flex-col items-start justify-between gap-4 rounded-2xl bg-neutral-50 px-6 py-6 sm:flex-row sm:items-center sm:px-8">
         <p className="text-muted-foreground text-sm sm:text-base">
-          <span className="text-foreground font-medium">Want to see live staging demos and architecture walkthroughs?</span>{" "}
-          We share full code and product tours on our intro call.
+          <span className="text-foreground font-medium">Want to see how we work?</span>{" "}
+          We share product tours and talk through the decisions behind each launch.
         </p>
         <a
           href={primaryCta.href}

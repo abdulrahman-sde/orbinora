@@ -11,11 +11,11 @@ export function ServicesSection() {
         label="What we do"
         title={
           <>
-            From first prototype <br className="hidden sm:inline" />
-            to production scale.
+            App, web, and AI/ML <br className="hidden sm:inline" />
+            products people rely on.
           </>
         }
-        description="Whether you are launching a new SaaS product from scratch, scaling an existing platform, or shipping applied AI workflows, we plug in where you need senior execution."
+        description="We design and build mobile apps, web products, and practical AI/ML tools that help your business serve customers better."
       />
 
       {/* Aside-style borderless stage + inline prose caption grid */}

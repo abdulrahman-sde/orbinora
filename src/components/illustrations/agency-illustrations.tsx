@@ -379,40 +379,45 @@ export function ServiceIllustration({ kind }: { kind: ServiceIllustrationKind })
   }
 }
 
-/** Card 1: Build your first version — Interactive Prototype & Architecture Stage */
+/** Card 1: Mobile app development — Product planning and launch stage */
 function MvpSprintIllustration() {
   return (
     <div aria-hidden="true" className="relative flex size-full items-center justify-center p-6 select-none">
-      <div className="relative w-full max-w-xs rounded-2xl bg-white p-5 shadow-lg shadow-black/[0.04] ring-1 ring-black/[0.06] transition-transform duration-300 group-hover:-translate-y-1">
-        <div className="flex items-center justify-between border-b border-black/6 pb-3">
-          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground">
-            <FigmaIcon className="size-3.5" />
-            <span>0 → 1 Product Build</span>
-          </span>
-          <span className="text-xs text-primary font-medium tabular-nums">8–12 wks</span>
+      <div className="relative flex w-full max-w-xs items-center justify-center gap-5 transition-transform duration-300 group-hover:-translate-y-1">
+        <div className="relative h-64 w-32 rounded-[1.7rem] bg-foreground p-1.5 shadow-xl shadow-black/[0.12]">
+          <div className="relative flex h-full flex-col overflow-hidden rounded-[1.35rem] bg-white">
+            <div className="flex items-center justify-between px-3 pt-3 text-[9px] font-medium">
+              <span>9:41</span>
+              <span className="flex gap-0.5"><i className="size-1 rounded-full bg-foreground" /><i className="size-1 rounded-full bg-foreground" /><i className="size-1 rounded-full bg-foreground" /></span>
+            </div>
+            <div className="mx-auto mt-1 h-1 w-8 rounded-full bg-foreground/10" />
+            <div className="mt-5 px-3">
+              <p className="text-[9px] text-muted-foreground">Good morning</p>
+              <p className="mt-1 text-sm font-medium">Your day, at a glance.</p>
+              <div className="mt-4 rounded-xl bg-sky-100 p-3">
+                <div className="size-5 rounded-lg bg-white/80" />
+                <div className="mt-7 h-1.5 w-14 rounded-full bg-foreground/20" />
+                <div className="mt-1.5 h-1.5 w-9 rounded-full bg-foreground/10" />
+              </div>
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                <div className="h-10 rounded-lg bg-neutral-100" />
+                <div className="h-10 rounded-lg bg-neutral-100" />
+              </div>
+            </div>
+            <div className="mt-auto flex justify-around border-t border-black/6 py-3 text-[9px] text-muted-foreground">
+              <span className="font-medium text-foreground">Home</span><span>Explore</span><span>Profile</span>
+            </div>
+          </div>
         </div>
-
-        {/* Visual miniature wireframe + milestone nodes */}
-        <div className="mt-3.5 space-y-2.5 text-xs">
-          <div className="flex items-center gap-2.5 text-muted-foreground">
-            <RiCheckboxCircleFill className="size-4 shrink-0 text-emerald-500" />
-            <span>Clickable Figma Prototype</span>
-            <span className="ml-auto text-[11px] tabular-nums">Wk 2</span>
+        <div className="w-28 space-y-2">
+          <div className="rounded-xl bg-white p-3 shadow-lg ring-1 ring-black/[0.06]">
+            <RiLayoutMasonryLine className="size-4 text-sky-600" />
+            <p className="mt-2 text-[10px] font-medium text-foreground">Made for thumbs</p>
+            <p className="mt-1 text-[9px] leading-relaxed text-muted-foreground">Simple flows that feel natural.</p>
           </div>
-          <div className="flex items-center gap-2.5 text-muted-foreground">
-            <RiCheckboxCircleFill className="size-4 shrink-0 text-emerald-500" />
-            <span>Multi-Tenant Auth & Stripe</span>
-            <span className="ml-auto text-[11px] tabular-nums">Wk 4</span>
-          </div>
-          <div className="flex items-center gap-2.5 rounded-xl bg-indigo-50/70 px-3 py-2 font-medium text-foreground ring-1 ring-indigo-500/15">
-            <RiRefreshLine className="size-4 shrink-0 animate-spin text-primary" style={{ animationDuration: "4s" }} />
-            <span>Core Workflows & API</span>
-            <span className="ml-auto text-[11px] text-primary tabular-nums">Wk 7</span>
-          </div>
-          <div className="flex items-center gap-2.5 text-muted-foreground">
-            <span className="size-3.5 shrink-0 rounded-full border border-black/20" />
-            <span>Production Cutover & SLA</span>
-            <span className="ml-auto text-[11px] tabular-nums">Wk 10</span>
+          <div className="rounded-xl bg-foreground p-3 text-white shadow-lg">
+            <p className="text-[9px] text-white/60">Next step</p>
+            <p className="mt-1 text-[10px] font-medium">Ready to try</p>
           </div>
         </div>
       </div>
@@ -420,36 +425,34 @@ function MvpSprintIllustration() {
   );
 }
 
-/** Card 2: Scale an existing product — Quartz Libre Uptime Strip & Velocity Bar */
+/** Card 2: Web product development — Product improvement and delivery stage */
 function ScaleUptimeIllustration() {
   return (
     <div aria-hidden="true" className="relative flex size-full items-center justify-center p-6 select-none">
-      <div className="w-full max-w-xs rounded-2xl bg-white p-5 shadow-lg shadow-black/[0.04] ring-1 ring-black/[0.06] transition-transform duration-300 group-hover:-translate-y-1">
-        <div className="flex items-center justify-between text-xs">
-          <span className="font-medium text-foreground">Production Uptime</span>
-          <span className="font-medium text-emerald-600 tabular-nums">99.98%</span>
+      <div className="w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/[0.04] ring-1 ring-black/[0.06] transition-transform duration-300 group-hover:-translate-y-1">
+        <div className="flex items-center gap-2 border-b border-black/6 px-4 py-3">
+          <span className="size-2 rounded-full bg-red-300" /><span className="size-2 rounded-full bg-amber-300" /><span className="size-2 rounded-full bg-emerald-300" />
+          <span className="ml-3 text-[10px] text-muted-foreground">yourproduct.com</span>
         </div>
-        <div className="mt-3 overflow-hidden">
-          <div className="flex w-[160%] gap-1 transition-transform duration-700 ease-in-out group-hover:-translate-x-1/4">
-            {Array.from({ length: 36 }).map((_, idx) => (
-              <div
-                key={idx}
-                className={cn(
-                  "h-7 w-1.5 shrink-0 rounded-xs",
-                  idx === 12 || idx === 25 ? "bg-neutral-300" : "bg-emerald-500",
-                )}
-              />
-            ))}
+        <div className="grid grid-cols-[84px_1fr]">
+          <div className="space-y-2 border-r border-black/6 bg-neutral-50 p-3">
+            <div className="h-2 w-10 rounded-full bg-foreground/15" />
+            <div className="h-2 w-14 rounded-full bg-sky-200" />
+            <div className="h-2 w-12 rounded-full bg-foreground/10" />
+            <div className="h-2 w-9 rounded-full bg-foreground/10" />
           </div>
-        </div>
-        <div className="mt-5 border-t border-dashed border-black/8 pt-4">
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-muted-foreground">PostgreSQL p95 Latency</span>
-            <span className="font-medium text-foreground tabular-nums">38ms (-64%)</span>
-          </div>
-          <div className="mt-2 flex h-2.5 gap-0.5 overflow-hidden rounded-xs">
-            <div className="bg-primary h-full w-2/5 transition-all duration-300 group-hover:w-3/5" />
-            <div className="bg-blueprint-hatch h-full flex-1 border border-black/8" />
+          <div className="p-4">
+            <div className="flex items-center justify-between">
+              <div><p className="text-[9px] text-muted-foreground">Overview</p><p className="mt-1 text-sm font-medium">Welcome back</p></div>
+              <div className="size-6 rounded-full bg-sky-100" />
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-2">
+              <div className="h-12 rounded-lg bg-sky-100" /><div className="h-12 rounded-lg bg-neutral-100" /><div className="h-12 rounded-lg bg-neutral-100" />
+            </div>
+            <svg viewBox="0 0 220 50" className="mt-5 h-12 w-full" fill="none">
+              <path d="M2 42 C28 38 35 25 58 31 S93 10 119 22 S151 36 174 17 S202 19 218 5" stroke="#587a9b" strokeWidth="3" strokeLinecap="round" />
+              <path d="M2 42 C28 38 35 25 58 31 S93 10 119 22 S151 36 174 17 S202 19 218 5 V50 H2Z" fill="#dbeaf3" />
+            </svg>
           </div>
         </div>
       </div>
@@ -457,12 +460,12 @@ function ScaleUptimeIllustration() {
   );
 }
 
-/** Card 3: Add AI that earns its keep — Clean Multi-Model SVG Beam Flow */
+/** Card 3: AI and machine learning — Helpful input to clear output */
 function AiRoutingIllustration() {
   return (
     <div aria-hidden="true" className="relative flex size-full items-center justify-center p-6 select-none">
       <div className="relative flex w-full max-w-xs items-center justify-between">
-        {/* Left: 3 Model Nodes */}
+        {/* Left: Helpful input nodes */}
         <div className="relative z-10 flex flex-col gap-2.5">
           <div className="flex size-10 items-center justify-center rounded-xl bg-white shadow-md shadow-black/[0.04] ring-1 ring-black/[0.06]">
             <ClaudeIcon className="size-4 text-[#D97757]" />
@@ -512,11 +515,11 @@ function AiRoutingIllustration() {
           />
         </svg>
 
-        {/* Right: Grounded Output Card */}
+        {/* Right: Clear result card */}
         <div className="relative z-10 w-40 rounded-2xl bg-white p-4 shadow-lg shadow-black/[0.04] ring-1 ring-black/[0.06] transition-transform duration-300 group-hover:-translate-y-1">
           <div className="flex items-center justify-between text-[11px]">
-            <span className="font-medium text-foreground">Grounded Output</span>
-            <span className="text-emerald-600 font-medium tabular-nums">98.4%</span>
+            <span className="font-medium text-foreground">Helpful result</span>
+            <span className="text-emerald-600 font-medium tabular-nums">Ready</span>
           </div>
           <div className="mt-3 space-y-1.5">
             <div className="h-1.5 w-full rounded-full bg-neutral-200" />
@@ -525,7 +528,7 @@ function AiRoutingIllustration() {
           </div>
           <div className="mt-3 flex items-center gap-1 text-[11px] text-muted-foreground">
             <RiCheckLine className="size-3.5 text-emerald-600" />
-            <span>Citations verified</span>
+            <span>Checked and ready</span>
           </div>
         </div>
       </div>
@@ -533,40 +536,38 @@ function AiRoutingIllustration() {
   );
 }
 
-/** Card 4: Rescue a stuck project — Clean Diagnostic & Refactor Card */
+/** Card 4: Product improvement — Clear review and next steps */
 function ProjectRescueScannerIllustration() {
   return (
     <div aria-hidden="true" className="relative flex size-full items-center justify-center p-6 select-none">
       <div className="relative w-full max-w-xs overflow-hidden rounded-2xl bg-white p-5 shadow-lg shadow-black/[0.04] ring-1 ring-black/[0.06] transition-transform duration-300 group-hover:-translate-y-1">
-        {/* Subtle sweeping scanner line */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-20 overflow-hidden">
-          <div className="animate-scan h-full w-full">
-            <div className="h-px w-full bg-linear-to-r from-transparent via-primary/50 to-transparent" />
-          </div>
-        </div>
-
         <div className="flex items-center justify-between border-b border-black/6 pb-3 text-xs">
-          <span className="font-medium text-foreground">48-Hour Codebase Audit</span>
-          <span className="text-emerald-600 font-medium">Stabilized</span>
+          <span className="font-medium text-foreground">Product review</span>
+          <span className="text-emerald-600 font-medium">Clear next steps</span>
         </div>
 
         <div className="mt-3.5 space-y-2.5 text-xs">
           <div className="rounded-xl bg-neutral-50 p-3">
             <div className="flex items-center justify-between text-muted-foreground">
-              <span>Core Architecture Retained</span>
+              <span>What is already working</span>
               <span className="font-medium text-foreground tabular-nums">72%</span>
             </div>
             <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-neutral-200">
-              <div className="h-full w-[72%] rounded-full bg-emerald-500" />
+              <div className="h-full w-[72%] rounded-full bg-sky-400" />
             </div>
           </div>
 
           <div className="flex items-center justify-between pt-1 text-muted-foreground">
             <span className="flex items-center gap-1.5 text-foreground">
               <RiCheckboxCircleFill className="size-4 text-emerald-500" />
-              CI pipeline & auth repaired
+              Biggest improvements identified
             </span>
-            <span className="tabular-nums">4.1x faster</span>
+            <span className="tabular-nums">3 areas</span>
+          </div>
+          <div className="grid grid-cols-3 gap-2 pt-2">
+            <div className="h-12 rounded-lg bg-sky-100" />
+            <div className="h-12 rounded-lg bg-neutral-100" />
+            <div className="h-12 rounded-lg bg-neutral-100" />
           </div>
         </div>
       </div>

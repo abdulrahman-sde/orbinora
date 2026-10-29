@@ -21,7 +21,7 @@ export function CommitmentsSection() {
             choose Orbinora.
           </>
         }
-        description="Principal-level product design, full-stack engineering, and applied AI—delivered with direct Slack access, weekly live demos, and 100% client IP ownership from day one."
+        description="Experienced designers and builders, delivered with direct access, weekly previews, and full ownership of everything we create together."
       />
 
       {/* 5-Card Asymmetric Bento Grid (Modeled on reference image media_1792396544079_94c67a16.png) */}
@@ -75,7 +75,7 @@ export function CommitmentsSection() {
               Measurable Impact
             </h3>
             <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-              Every milestone is backed by production telemetry, sub-50ms latency targets, and a 30-day bug-free launch warranty.
+              Every milestone is tied to a clear result, with careful checks and 30 days of support after launch.
             </p>
           </div>
         </Reveal>
@@ -93,7 +93,7 @@ export function CommitmentsSection() {
               Future-Ready Solutions
             </h3>
             <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-              Modular Next.js, TypeScript, PostgreSQL, and multi-model AI architectures built in your repo so your team can scale without rewrites.
+              A thoughtful product built around your needs, so your team can keep improving it without starting over.
             </p>
           </div>
         </Reveal>
@@ -111,7 +111,7 @@ export function CommitmentsSection() {
               Transparent Process
             </h3>
             <p className="text-muted-foreground mt-2 max-w-xl text-sm leading-relaxed">
-              Fixed-price milestones, code pushed to your GitHub from commit #1, and live staging walkthroughs every week so you never wonder where your build stands.
+              Fixed-price milestones and a live preview every week, so you always know what is happening and what comes next.
             </p>
           </div>
         </Reveal>
@@ -121,12 +121,12 @@ export function CommitmentsSection() {
       <Reveal delay={0.25} className="mt-6 grid gap-6 lg:grid-cols-12">
         <div className="flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-6 shadow-xs ring-1 ring-black/6 sm:flex-row sm:items-center lg:col-span-7">
           <div className="max-w-xs space-y-2 pr-4">
-            <p className="text-brand text-xs font-medium">Built With Proven Tools</p>
+            <p className="text-brand text-xs font-medium">Built for the long term</p>
             <h3 className="font-display text-foreground text-xl font-normal">
-              Modern stack your future hires already love.
+              A product your team can grow with.
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Next.js, TypeScript, PostgreSQL, Figma, Linear, and multi-model AI routing with zero proprietary lock-in.
+              We use dependable, widely supported tools and leave your team with full control.
             </p>
           </div>
           <div className="mt-6 h-56 w-full shrink-0 sm:mt-0 sm:w-60">
@@ -147,7 +147,7 @@ export function CommitmentsSection() {
               100% Your IP &amp; Cloud Keys
             </h3>
             <p className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
-              AWS, Vercel, Stripe, and GitHub accounts live in your company&apos;s name from day one.
+              Your accounts, files, and product always stay in your company&apos;s name.
             </p>
           </div>
         </div>
