@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "orbinora",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "-p", "3100"],
+      "port": 3100
+    },
+    {
+      "name": "kairo-reference",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Volumes/Data/code/kairo-templates", "run", "dev", "--", "-p", "3101"],
+      "port": 3101
+    }
+  ]
+}

@@ -1,26 +1,262 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * AsideDisplay Variable Font — Airy, editorial display typography from Aside Landing
+ */
+@font-face {
+  font-family: "AsideDisplay";
+  src: url("/media/AsideDisplay_Variable-s.p.1sv22ercfkh3x.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
 }
 
 @theme inline {
+  /* Surfaces */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  /* Intent */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+
+  /* Tailark Illustration Surfaces */
+  --color-illustration: var(--illustration);
+  --color-border-illustration: var(--border-illustration);
+
+  /* Brand & Tints */
+  --color-brand: var(--brand);
+  --color-brand-content: var(--brand-content);
+  --color-tint-lilac: var(--tint-lilac);
+  --color-tint-lime: var(--tint-lime);
+  --color-tint-sky: var(--tint-sky);
+  --color-tint-peach: var(--tint-peach);
+  --color-tint-ink: var(--tint-ink);
+
+  /* Lines */
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-rail: var(--rail);
+
+  /* Typography — Airy AsideDisplay for headings, Geist Sans for body */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: "AsideDisplay", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "AsideDisplay", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-weight-book: 450;
+  --tracking-display: -0.015em;
+
+  /* Radius scale */
+  --radius-xs: calc(var(--radius) * 0.4);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.4);
+  --radius-4xl: calc(var(--radius) * 3);
+
+  /* Elevation */
+  --shadow-card: var(--elevation-card);
+  --shadow-float: var(--elevation-float);
+  --shadow-button: var(--elevation-button);
+  --shadow-frame: var(--elevation-frame);
+
+  /* Keyframe Animations */
+  --animate-marquee: marquee 36s linear infinite;
+  --animate-scan: scan 3.6s ease-in-out infinite;
+  --animate-beam-move: beam-move 4.2s linear infinite;
+  --animate-beam-move-delayed: beam-move 4.2s linear infinite 1.8s;
+  --animate-model-flow: model-flow 4.5s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 3.5s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.75rem;
+
+  /* Pure, breathable white canvas like Aside & Quartz Libre */
+  --background: #ffffff;
+  --foreground: #090b0c;
+  --card: #ffffff;
+  --card-foreground: #090b0c;
+  --popover: #ffffff;
+  --popover-foreground: #090b0c;
+
+  /* Refined Indigo Primary */
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f5f5f5;
+  --secondary-foreground: #171717;
+
+  --muted: #f5f5f5;
+  --muted-foreground: #686b6e;
+
+  --accent: color-mix(in oklab, var(--primary) 8%, transparent);
+  --accent-foreground: #312c85;
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  /* Tailark Quartz Illustration Tokens */
+  --illustration: #ffffff;
+  --border-illustration: rgba(0, 0, 0, 0.065);
+
+  --brand: #4f46e5;
+  --brand-content: #4f46e5;
+
+  --tint-lilac: oklch(0.93 0.035 285);
+  --tint-lime: oklch(0.95 0.08 145);
+  --tint-sky: oklch(0.93 0.04 235);
+  --tint-peach: oklch(0.94 0.045 55);
+  --tint-ink: #090b0c;
+
+  --border: rgba(0, 0, 0, 0.06);
+  --input: rgba(0, 0, 0, 0.09);
+  --ring: #4f46e5;
+  --rail: rgba(0, 0, 0, 0.05);
+
+  --elevation-card: 0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 2px 6px -1px rgba(0, 0, 0, 0.03),
+    0 12px 24px -8px rgba(0, 0, 0, 0.04);
+  --elevation-float: 0 0 0 1px rgba(0, 0, 0, 0.065),
+    0 8px 20px -4px rgba(0, 0, 0, 0.05),
+    0 24px 48px -12px rgba(0, 0, 0, 0.06);
+  --elevation-button: inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 1px 2px rgba(0, 0, 0, 0.14),
+    0 4px 12px -2px rgba(79, 70, 229, 0.28);
+  --elevation-frame: 0 24px 48px -20px rgba(0, 0, 0, 0.12);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply scroll-smooth font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/15 selection:text-primary;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-semimedium {
+  font-weight: 450;
+}
+
+.bg-landing-banner {
+  background-image: url("/images/bg-banner.png");
+}
+
+/* Blueprint diagonal hatching utility matching Tailark Quartz */
+.bg-blueprint-hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--border-illustration),
+    var(--border-illustration) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+}
+
+.bg-blueprint-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Animated SVG Beams & Scanners */
+@keyframes beam-move {
+  0% {
+    stroke-dashoffset: 600px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes beam-move-down {
+  0% {
+    stroke-dashoffset: 520px;
+  }
+  100% {
+    stroke-dashoffset: -120px;
+  }
+}
+
+@keyframes model-flow {
+  0% {
+    stroke-dashoffset: 320px;
+  }
+  50% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: -320px;
+  }
+}
+
+@keyframes scan {
+  0%,
+  100% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(105%);
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
